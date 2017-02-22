@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="12">
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/mychatlogosplash"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:layout_centerHorizontal="true"/>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_userid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/input_layout_password"
+                android:layout_alignParentLeft="true"
+                app:hintTextAppearance="@style/TextLabel"
+                android:layout_alignParentStart="true">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/edtEmpId"
+                    android:singleLine="true"
+                    android:hint="User Id"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#555555"
+                    android:layout_above="@+id/btnouter"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_line"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnouter"
+                app:hintTextAppearance="@style/TextLabel"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/edtPassword"
+                    android:singleLine="true"
+                    android:hint="Password"
+                    android:paddingLeft="10dp"
+                    android:textColor="#000000"
+                    android:inputType="textPassword"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:textColorHint="#555555"
+                    android:layout_above="@+id/btnouter"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    />
+                </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/btnouter"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:weightSum="2">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button_orange"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="#FFF"
+                    android:id="@+id/btnLogin"
+                    android:text="Login"
+                    android:onClick="LoginClick" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_button_orange"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:gravity="center"
+                    android:textSize="18dp"
+                    android:textColor="#FFF"
+                    android:id="@+id/btnSignup"
+                    android:text="Sign up"
+                    android:onClick="SignupClick"
+                    />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView style="@style/TextViewsBold15"
+                android:text="Forgot Password ?"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="#4682B4"
+                android:clickable="true"
+                android:onClick="forgotPass"
+                android:id="@+id/txtForgetPswrd"/>
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="#4682B4"
+                android:buttonTint="@color/colorAccent"
+                android:text="Remember Me !"
+                android:checked="false" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1">
+            <TextView style="@style/TextViewsBold15"
+                android:layout_marginBottom="0dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:textColor="#4682B4"
+                android:text="© 2016 RealizerTech"/>
+
+        </FrameLayout>
+
+    </LinearLayout>
+    <realizer.com.chat.view.ProgressWheel
+        android:id="@+id/loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        app:matProg_barColor="@color/colorAccent"
+        app:matProg_progressIndeterminate="true"
+        />
+</RelativeLayout>
